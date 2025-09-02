@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📈 Stock Market Alarm</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>⏰ Stock Market Alarm</h1>
+
+    <form id="alarmForm">
+      <label>Stock Symbol (e.g., AAPL, TSLA, BTCUSD):</label>
+      <input type="text" id="symbol" placeholder="AAPL" required>
+
+      <label>Condition:</label>
+      <select id="condition">
+        <option value="above">Above</option>
+        <option value="below">Below</option>
+      </select>
+
+      <label>Target Price:</label>
+      <input type="number" id="target" placeholder="Enter price" required>
+
+      <label>
+        <input type="checkbox" id="demoMode"> Enable Demo Mode
+      </label>
+
+      <button type="submit">Set Alarm</button>
+    </form>
+
+    <p id="status">No alarm set.</p>
+  </div>
+
+  <!-- Alarm Sound -->
+  <audio id="alarmSound" src="https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
